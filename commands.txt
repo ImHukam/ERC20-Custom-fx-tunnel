@@ -1,0 +1,8 @@
+npx hardhat compile 
+npx hardhat run scripts/deploy.js --network 'name'
+npx hardhat verify <contract address> --network 'name'
+npx hardhat verify <contract address> 'argument' --network 'name'// for single argumetn
+
+npx hardhat verify <contract address> arguments.js --network 'name' // for multiple argument
+
+npx hardhat verify <contract address> "arg1" "arg2" "arg3" ...  --network 'name' // for multiple argument

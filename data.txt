@@ -1,0 +1,25 @@
+safeERC20: 0x19581bc8a5481e243866e63E371e327609069679
+template goerli: 0x8fC6cA6E5468c5832c92E8e5a9277bFDfe85A836
+template mumbai: 0x9e75E9Ce1b4B7680E9533E4Fb76c35BF3FEC530e
+
+FxERC20RootTunnel: 0x893f2C460D4F8B88D047f82140bBA35F1f3f841F
+FxERC20ChildTunnel: 0x2328Eb24551E6F636Ce797c9684F9A9f754004Ab
+
+FxERC20RootTunnel: 0x739581AcBA27D7174472B735024b0735bD2aCbF1
+FxERC20ChildTunnel: 0xC97Cb154C6b59Fa910552B9f9E4AfeaeB9cB9Cfc 
+
+
+
+process:
+deploy safe erc20
+deploy template token goerli and mumbai- call initilize function(argument same for both network), 
+   {
+    fx manager- owner address
+    connect token- safe erc20 token address(step 1)
+    }
+deploy fx tunnel on both network by setting constructor as per documents 
+make connection between root and child tunnel by calling setfxtunnel function on both network
+map token on root tunenl by passing safeERC20 address
+approve safeERC20 token by passing root tunnel address
+call deposit function to deposit token into polygon
+
